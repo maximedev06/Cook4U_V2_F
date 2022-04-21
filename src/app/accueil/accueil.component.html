@@ -1,0 +1,93 @@
+<h1>Zone de recherche avancé</h1>
+
+<div>
+    <form action="" #search="ngForm" (ngSubmit)="rechercheRecette(search.value)">
+        <div>
+            <label for="">Je recherche...</label>
+            <input type="text" name="nomRecette" ngModel="" id="" >
+        </div>
+        <div>
+            <label for="">Type</label>
+            <select type="text" name="type" ngModel="" id="" >
+                <option value=""></option>
+                <option value="Aperitifs">Aperitifs</option>
+                <option value="Entrees">Entrées</option>
+                <option value="Plats">Plats</option>
+                <option value="Desserts">Desserts</option>
+                <option value="Boissons">Boissons</option>
+                <option value="Sauces">Sauces</option>
+            </select>
+        </div>
+        <div>
+            <label for="">Difficulté max</label>
+            <select type="text" name="difficulte" ngModel="" id="" >
+                <option value=""></option>
+                <option value="Facile">Facile</option>
+                <option value="Moyenne">Moyenne</option>
+                <option value="Difficile">Difficile</option>
+            </select>
+        </div>
+        <div>
+            <label for="">Temps</label>
+            <select type="text" name="temps" ngModel="" id="" >
+                <option value=0></option>
+                <option value=15>15 minutes</option>
+                <option value=30>30 minutes</option>
+                <option value=60>60 minutes</option>
+            </select>
+        </div>
+        <div>
+            <label for="">Calorie max</label>
+            <select type="text" name="calorie" ngModel="" id="" >
+                <option value=0></option>
+                <option value=100>100 kcal</option>
+                <option value=200>200 kcal</option>
+                <option value=400>400 kcal</option>
+            </select>
+        </div>
+        <button type="submit">Rechercher</button>
+    </form>
+</div>
+
+<h2>Résultat de la recherche</h2>
+
+
+<br>
+<h1>Nos recettes </h1>
+<br>
+<table>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Nom de la recette</th>
+            <th>Temps</th>
+            <th>Difficulté</th>
+            <th>calorie</th>
+            <th>photo</th>
+            <th>type</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let r of recettes, let i = index">
+            <th>{{i+1}}</th>
+            <th>{{r.nomRecette}}</th>
+            <th>{{r.temps}}</th>
+            <th>{{r.difficulte}}</th>
+            <th>{{r.calorie}}</th>
+            <th>{{r.photoRecette}}</th>
+            <th>{{r.type}}</th>
+            <th><button (click)="infoRecette(r)">Info</button></th>
+        </tr>
+    </tbody>
+</table>
+
+<br>
+
+<button>Ajouter une recette</button>
+
+
+
+
+
+
+

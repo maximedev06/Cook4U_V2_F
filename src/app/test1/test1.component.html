@@ -1,0 +1,135 @@
+<h1>Liste des Recettes</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Nom de la recette</th>
+            <th scope="col">Type</th>
+            <th scope="col">Difficulté</th>
+            <th scope="col">Temps</th>
+            <th scope="col">Modifier</th>
+            <th scope="col">Supprimer</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let r of recettes">
+            <th>{{r.nomRecette}}</th>
+            <th>{{r.type}}</th>
+            <th>{{r.difficulte}}</th>
+            <th>{{r.temps}}</th>
+            <th><button type="button" (click)="editRecette = r" (click)="idEditRecette = r.idRecette" class="btn btn-warning">Modifier</button></th>
+            <th><button type="button" (click)="deleteRecette(r)" class="btn btn-danger">Supprimer</button></th>
+        </tr>
+    </tbody>
+</table>
+
+<h1>Ajouter une recette</h1>
+
+<form class="my-5" action="" #newRecette='ngForm' (ngSubmit)="addRecette(newRecette.value)">
+    <div class="mb-3">
+        <label for="" class="form-label">Nom de la recette</label>
+        <input type="text" name="nomRecette" id="" class="form-control" ngModel="">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Temps</label>
+        <input type="number" name="temps" id="" class="form-control" ngModel="">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Type</label>
+        <select name="type" id="" class="form-select" ngModel="">
+            <option value="">Veuillez choisir un type</option>
+            <option value="Aperitifs">Apéritif</option>
+            <option value="Entrees">Entrée</option>
+            <option value="Plats">Plats</option>
+            <option value="Desserts">Desserts</option>
+            <option value="Boissons">Boissons</option>
+            <option value="Sauces">Sauces</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Difficulté</label>
+        <select name="difficulte" id="" class="form-select" ngModel="">
+            <option value="">Veuillez choisir une difficulté</option>
+            <option value="Facile">Facile</option>
+            <option value="Moyenne">Moyenne</option>
+            <option value="Difficile">Difficile</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Nombre de part</label>
+        <input type="number" name="nombrePart" id="" class="form-control" ngModel="">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Calorie</label>
+        <input type="number" name="calorie" id="" class="form-control" ngModel="">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Photo</label>
+        <input type="text" name="photoRecette" id="" class="form-control" ngModel="">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">texte</label>
+        <input type="text" name="texteRecette" id="" class="form-control" ngModel="">
+    </div>
+    <button type="submit" class="btn btn-success">Valider</button>
+</form>
+
+<h1>Modifier une recette</h1>
+
+<form action="" #upRecette='ngForm' (ngSubmit)="uptRecette(upRecette.value)">
+    <div class="mb-3">
+        <label for="" class="form-label">Nom de la recette</label>
+        <input type="text" name="nomRecette" id="" class="form-control" ngModel="{{editRecette?.nomRecette}}">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Temps</label>
+        <input type="number" name="temps" id="" class="form-control" ngModel="{{editRecette?.temps}}">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Type</label>
+        <select name="type" id="" class="form-select" ngModel="{{editRecette?.type}}">
+            <option value="">Veuillez choisir un type</option>
+            <option value="Aperitifs">Apéritif</option>
+            <option value="Entrees">Entrée</option>
+            <option value="Plats">Plats</option>
+            <option value="Desserts">Desserts</option>
+            <option value="Boissons">Boissons</option>
+            <option value="Sauces">Sauces</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Difficulté</label>
+        <select name="difficulte" id="" class="form-select" ngModel="{{editRecette?.difficulte}}">
+            <option value="">Veuillez choisir une difficulté</option>
+            <option value="Facile">Facile</option>
+            <option value="Moyenne">Moyenne</option>
+            <option value="Difficile">Difficile</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Nombre de part</label>
+        <input type="number" name="nombrePart" id="" class="form-control" ngModel="{{editRecette?.nombrePart}}">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Calorie</label>
+        <input type="number" name="calorie" id="" class="form-control" ngModel="{{editRecette?.calorie}}">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Photo</label>
+        <input type="text" name="photoRecette" id="" class="form-control" ngModel="{{editRecette?.photoRecette}}">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">texte</label>
+        <input type="text" name="texteRecette" id="" class="form-control" ngModel="{{editRecette?.texteRecette}}">
+    </div>
+    <button type="submit" class="btn btn-success">Valider</button>
+</form>
+
+
+
+
+
+
+
+
+
