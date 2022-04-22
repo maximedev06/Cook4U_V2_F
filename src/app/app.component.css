@@ -1,0 +1,149 @@
+/* ******************************** */
+/*    Propriété générale du doc     */
+/* ******************************** */
+
+*{
+    margin: 0%;
+    padding: 0px;
+    /*font-family: 'Times New Roman', Times, serif;*/
+}
+
+.bgcolorBlack{
+    background-color: black;
+}
+
+.bgcolorGrey{
+    background-color: rgb(220, 220, 220);
+}
+
+/* Ppt pour l'ombre en dessous des divs*/
+.boxShadow{
+    box-shadow: 0px 10px 10px grey;
+}
+
+/* Ppt pour les boutons "classique" du site : font en noir texte en blanc, et lorsque :hover font en blanc cassé et texte en noir*/
+.btnClassique{
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-weight: bolder;
+    color: white;
+}
+
+
+.btnClassique:hover{
+    background-color: rgb(220, 220, 220);
+    color: black;
+}
+
+
+/*Pour centrer horizontalement l'intérieur d'une div*/
+.centre{
+    position: relative;
+    top: 0px;
+    display: flex;
+}
+
+/*Pour centrer verticalement l'intérieur d'une div*/
+.centrerVerticalement{
+    display : flex;
+    align-items : center;
+    justify-content : center;
+}
+
+/* Mettre la premiere lettre en maj*/
+.majPremiereLettre::first-letter{
+    text-transform: capitalize;
+}
+
+
+/* ******************************** */
+/*    Propriété pour logo et menu   */
+/* ******************************** */
+
+#topPage { 
+    width : 100%; 
+    height : 70px; 
+    background-color : #ffffff; 
+    margin-top: 40px;
+    margin-bottom: 40px;
+} 
+.logo{
+    font-size: 250%;
+    text-align: center;
+    letter-spacing: 2px;
+    font-weight: 400;
+    color: black;
+}
+
+span{
+    /* color: rgb(78, 78, 78); */
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+/* Barre de navigation */
+.menuP{
+    z-index: 2;
+}
+
+nav{
+    text-align: center;
+
+    }
+.menu{
+    display: inline-block;
+}
+nav ul{
+    list-style-type: none;
+}
+.menu > li{
+    float: left;
+    color: black;
+    width: 170px;
+    height: 150px;
+    line-height: 40px;
+    background: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    font-size: 22px;
+}
+.sub-menu{
+    transform: scale(0);
+    transform-origin: top center;
+    transition: all 300ms ease-in-out;
+}
+.sub-menu li{
+    font-size: 18px;
+    background: white;
+    border-left:  1px solid gray;
+    border-right: 1px solid gray;
+    color: black;
+    transform: scale(0);
+    transform-origin: top center;
+    transition: all 100ms ease-in-out;
+    line-height: 150%;
+
+}
+.sub-menu li:last-child{
+    border-bottom: 1px solid gray;
+}
+.sub-menu li:hover,.menu a:hover{
+    /*text-decoration: underline;*/
+    color: #e44101 ;
+}
+.menu > li:hover .sub-menu li{
+    transform: scale(1);
+}
+.menu > li:hover .sub-menu{
+    transform: scale(1);
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+
+

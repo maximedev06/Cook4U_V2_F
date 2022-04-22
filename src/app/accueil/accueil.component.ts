@@ -6,7 +6,7 @@ import { RecetteService } from '../service/recette.service';
 @Component({
   selector: 'app-accueil',
   templateUrl: './accueil.component.html',
-  styleUrls: ['./accueil.component.css']
+  styleUrls: ['./accueil.component.css','../app.component.css']
 })
 export class AccueilComponent implements OnInit {
 

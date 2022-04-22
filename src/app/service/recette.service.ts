@@ -103,8 +103,8 @@ export class RecetteService {
                   catchError(this.handlerError('getRecette',[]))
                 );
             } else {
-              console.log("diff cal")
-              return this.http.get<Recette[]>(this.auth.lienApi + 'recette/calMax/' + recette.calorie)
+              console.log("diff cal") 
+              return this.http.get<Recette[]>(this.auth.lienApi + 'recette/avance25/' + recette.calorie+'/'+recette.difficulte)
                 .pipe(
                   catchError(this.handlerError('getRecette',[]))
                 );

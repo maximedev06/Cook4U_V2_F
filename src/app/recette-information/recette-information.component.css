@@ -1,0 +1,75 @@
+
+/* *********************************** */
+/* Propriété de la partie info Recette */
+/* *********************************** */
+
+
+.gridRecetteInformation{
+    display: grid;
+    grid-template-columns: repeat(1, 700px);
+    grid-template-rows: repeat(4);
+    margin: auto;
+    text-align: center;
+    grid-row-gap: 0px;
+
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 0px 10px 10px grey;
+}
+
+/*Partie 1 : avec le nom de la recette et le bouton pour modifier la recette*/
+    .gridRecetteInformation1{
+        display: grid;
+        grid-template-columns: 100px 500px 100px;
+        grid-template-rows: repeat(4);
+        margin: auto;
+        text-align: center;
+        grid-row-gap: 0px;
+    }
+
+    .gridRecetteInformation1 div{
+        height: 80px;
+    }
+
+    .btnModifRecette{
+        height: 50%;
+        border: none;
+    }
+
+/*Partie 2 : avec l'image de la recette*/
+    .imgRecette{
+        height: 460px;
+        border-top: 5px white solid;
+        border-bottom: 5px white solid;
+    }
+
+
+/* Partie 3 : avec les infos temps - difficulté - cal*/
+    .gridRecetteInformation3{
+        display: grid;
+        grid-template-columns: 230px 230px 230px;
+        margin: auto;
+        text-align: center;
+        grid-row-gap: 0px;
+    }
+
+    .gridRecetteInformation3 div{
+        height: 60px;
+    }
+
+/* Partie 4 texte de présentation de la recette*/
+
+    .textePresentationRecette{
+        margin: 10px 20px 20px 20px;
+    }
+
+    
+
+
+
+
+
+
+
+
+

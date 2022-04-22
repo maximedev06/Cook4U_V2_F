@@ -1,6 +1,37 @@
 
-<a routerLink="">Accueil</a> &nbsp; 
-<a routerLink="">Ingredient</a> &nbsp; 
-<a routerLink="test1">Test</a>
+<header id='topPage'> 
+    <div class="logo"> <h1>COOK<span>4</span>U</h1></div>
+</header> 
+
+<nav class="menuP">
+    <ul class="menu">
+        <li><h3><a routerLink="">Accueil</a></h3></li>
+        <li><h3><a routerLink="">Recettes</a></h3>
+        
+        <ul class="sub-menu">
+            <li><a routerLink="">Aperitifs</a></li>
+            <li><a routerLink="">Entrées</a></li>
+            <li><a routerLink="">Plats</a></li>
+            <li><a routerLink="">Desserts</a></li>
+            <li><a routerLink="">Boissons</a></li>
+            <li><a routerLink="">Sauces</a></li>
+        </ul>
+      
+        <li><h3><a routerLink="">Ingredients</a></h3></li>
+
+        <li><h3><a routerLink="">Allergies</a> </h3> 
+            <ul class="sub-menu" hidden>
+                <li>Vegan</li>
+                <li>Végétarien</li>
+                <li>Sans lactose</li>
+                <li>Sans gluten</li>
+                <li>Sans sucre</li>
+            </ul>
+        </li>
+    
+        <li><h3><a routerLink="/test1">Calendrier</a></h3></li>
+    </ul>
+</nav>
+
 
 <router-outlet></router-outlet>

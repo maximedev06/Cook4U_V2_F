@@ -1,0 +1,174 @@
+
+/* ******************************** */
+/*         Recherche avancée        */
+/* ******************************** */
+.RechercheRecette{
+   margin-top: 50px;
+}
+
+.gridRecherche {
+    display: grid;
+    grid-template-columns: 900px;
+    grid-template-rows: repeat(3,60px);
+    margin: auto;
+    text-align: center;
+    grid-row-gap: 10px;
+
+    border-radius: 40px;
+    border: 3px solid grey;
+    overflow: hidden;
+    z-index: 0;
+}
+
+    /* Partie bouton recherche avancé - recherche par nom - bouton lancer la recherche*/
+    .gridRechercheSup {
+        display: grid;
+        grid-template-columns:90px 680px 90px;
+        grid-template-rows: 50px;
+        grid-column-gap: 20px;
+        margin: auto;
+        text-align: center;
+    }
+
+    /* Parametre css des boutons */
+    
+    .boutonRechercheSup2{
+        width: 50%;
+        background-color: white;
+        border: none;
+    }
+
+    .imgRechercheSup{
+        width: 100%;
+    }
+
+    /* Parametre css pour la partie nom recette*/
+    .RechercheNomRecette{
+        width: 100%;
+        height: 80%;
+        font-size: large;
+        border: 2px solid black;
+        border-radius: 40px;
+    }
+
+    .RechercheNomInput{
+        width: 95%;
+        height: 100%;
+        border: none;
+    }
+
+    .RechercheNomInput:focus{
+        border: white 2px sol;
+    }
+
+    /*Partie centrale de la recherche (type et difficulté max*/
+    .gridRechercheCenter {
+        display: grid;
+        grid-template-columns:440px 440px;
+        grid-template-rows: 50px;
+        grid-column-gap: 20px;
+        margin: auto;
+        text-align: center;
+    }
+
+    .gridRechercheInf {
+        display: grid;
+        grid-template-columns:440px 440px;
+        grid-template-rows: 50px;
+        grid-column-gap: 20px;
+        margin: auto;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .labelRechercheRecette{
+        font-size: x-large;
+        margin-left: 20px
+    }
+
+    .selectRechercheRecette{
+        font-size: large;
+        margin-left: 40px;
+        width: 50%;
+    }
+
+
+/* ******************************** */
+/*   Titre + bouton ajout recette   */
+/* ******************************** */
+
+.gridTitre {
+    display: grid;
+    grid-template-columns:700px 140px;
+    grid-template-rows: 50px;
+    grid-column-gap: 20px;
+    margin: auto;
+    text-align: left;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    z-index: 0;
+}
+
+.btnAjoutRecette{
+    border-radius: 40px;
+}
+
+
+/* ******************************** */
+/*        Liste des recettes        */
+/* ******************************** */
+
+ .gridListeRecette{
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    grid-template-rows: auto;
+    margin: auto;
+    text-align: center;
+    grid-column-gap: 25px ;
+    grid-row-gap:25px;
+    margin-bottom: 300px;
+
+} 
+
+.boxRecette{
+    height: 275px;
+    border-radius: 50px;
+    margin: 0%;
+    padding: 0%;
+    overflow: hidden;
+    grid-row-gap:5px ;
+}
+
+.gridRecette{
+    display: grid;
+    grid-template-rows: 217px 3px 60px;
+    margin: auto;
+}
+
+.photoRecette{
+    height: 100%;
+    width: 100%;
+}
+
+.boutonInfoRecette:hover{
+    background-color: rgb(196, 196, 196);
+}
+
+.boutonInfoRecette h5{
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

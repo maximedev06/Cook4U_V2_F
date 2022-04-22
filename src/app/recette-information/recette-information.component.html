@@ -1,3 +1,45 @@
+
+
+<div class="centre">
+    <div class="gridRecetteInformation bgcolorGrey">
+        <div class="gridRecetteInformation1">
+            <div class=""></div>
+            <div class="centrerVerticalement "><h1 class="majPremiereLettre">{{recette?.nomRecette}}</h1></div>
+            <div class="centrerVerticalement">
+                <button class="btnModifRecette bgcolorGrey">
+                    <img height="100%" src="../../assets/img/param.png" alt="{{recette?.nomRecette}}">
+                </button>
+            </div>
+        </div>
+        <div class="imgRecette">
+            <img src="{{recette?.photoRecette}}" alt="" width="100%" height="100%">
+        </div>
+        <div class="gridRecetteInformation3">
+            <div class="centrerVerticalement">
+                <img src="../../assets/img/horloge.png" alt="temps" height="60%">
+                <h3>  &nbsp; {{recette?.temps}} min</h3>
+            </div>
+            <div class="centrerVerticalement">
+                <img src="../../assets/img/difficulte.png" alt="temps" height="60%">
+                <h3>  &nbsp; {{recette?.difficulte}}</h3>
+            </div>
+            <div class="centrerVerticalement">
+                <img src="../../assets/img/kcal.PNG" alt="temps" height="60%">
+                <h3>  &nbsp; {{recette?.calorie}} /pers</h3>
+            </div>
+        </div>
+        <div class="textePresentationRecette majPremiereLettre">
+            {{recette?.texteRecette}}
+        </div>
+    </div>
+</div>
+
+
+
+<br><br><br><br>
+
+
+
 <h1>Information sur la recette {{recette?.nomRecette}}</h1>
 
 <ul> 
