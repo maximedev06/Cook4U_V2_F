@@ -1,0 +1,121 @@
+/* ******************************** */
+/*        Recherche ingredient      */
+/* ******************************** */
+
+.rechercheIngredient{
+    margin-top: 50px;
+ }
+
+
+ .gridRechercheIngredients{
+    display: grid;
+    grid-template-columns: 100px 600px 100px;
+    margin: auto;
+    text-align: center;
+    border-radius: 50px;
+    border: 3px solid grey;
+    overflow: hidden;
+
+}
+
+.gridRechercheIngredients button{
+    border: none;
+    background-color: white;
+
+}
+
+.gridRechercheIngredients input{
+    font-size: large;
+    border: none;
+}
+
+.gridRechercheIngredients div{
+    height: 50px;
+}
+
+/* ******************************** */
+/*       Liste des ingrédients      */
+/* ******************************** */
+
+.zoneListeIngredient{
+    margin-top: 70px;
+}
+
+.gridListeIngredient{
+    display: grid;
+    grid-template-columns: 800px;
+    margin: auto;
+    grid-row-gap: 0px;
+    overflow: hidden;
+}
+
+
+    /*Partie sup avec titre et bouton pour ajouter une recette*/
+    .gridListeIngredientSup{
+        display: grid;
+        grid-template-columns: 400px 200px 200px;
+        margin: auto;
+        grid-row-gap: 0px;
+        overflow: hidden;
+    }
+
+    .titreTaille{
+        height: 80px;
+    }
+
+    .btnTaille{
+        margin-top: 15px;
+        width: 150px;
+        height: 50px;
+    }
+
+
+    /*Partie du milieu avec le nom de chaque colonne*/
+
+    .gridListeIngredientCenter{
+        display: grid;
+        grid-template-columns: 200px 150px 150px 150px 150px 100px;
+        grid-row-gap: 0px;
+        overflow: hidden;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .gridListeIngredientCenter div{
+        height: 30px;
+    }
+
+    .deca{margin-left: 0px;}
+
+    /* Partie inférieur avec la liste des ingrédients avec les informations + btn info recette*/
+    .gridListeIngredientInf{
+        display: grid;
+        grid-template-columns: 200px 150px 150px 150px 150px 70px 30px;
+        grid-template-rows: auto;
+        grid-row-gap: 0px;
+        overflow: hidden;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .gridListeIngredientInf .deca2{
+        margin-left: 50px;
+        text-align: left;
+    }
+
+    .visuel{
+        height: 30px;
+    }
+
+    .btnInfoIngredient{
+        height: 40px;
+        border:  none;
+    }
+
+
+
+
+
+
+
+

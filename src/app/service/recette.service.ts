@@ -13,17 +13,17 @@ export class RecetteService {
   private handlerError : HandleError;
 
   constructor(private auth :AuthService ,private http : HttpClient, httpErrorHandler : HttpErrorHandler) {
-    this.handlerError = httpErrorHandler.createHandleError('authService')
+    this.handlerError = httpErrorHandler.createHandleError('RecetteService')
   }
 
-  recetteInformation:Recette | undefined;
+  recetteInformation:any;
 
   
   /* GET voir toute les recettes présente dans la base de donnée */
   getRecettes(): Observable<Recette[]> {
     return this.http.get<Recette[]>(this.auth.lienApi + 'recette')
       .pipe(
-        catchError(this.handlerError('getRecette',[]))
+        catchError(this.handlerError('getAllRecette',[]))
       );
   }
 
@@ -56,7 +56,7 @@ export class RecetteService {
   updateRecette(recette : Recette, id : number){
     return this.http.put(this.auth.lienApi + 'recette/' + id,recette)
     .pipe(
-      catchError(this.handlerError('deleteRecette'))
+      catchError(this.handlerError('updateRecette'))
     );
   }
 

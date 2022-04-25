@@ -1,8 +1,8 @@
-
-<div class="RechercheRecette">
+<!-- Section de la recherche avancé des recettes -->
+<div class="rechercheRecette">
     <form action="" #search="ngForm" (ngSubmit)="rechercheRecette(search.value)">
         <div class="centre">
-            <div class="gridRecherche boxShadow">
+            <div class="gridRecherche boxShadow borderRad50 borderSearch">
                 <div class="gridRechercheSup">
                     <div class="centrerVerticalement">
                         <button class="boutonRechercheSup2">
@@ -71,6 +71,7 @@
     </form>
 </div>
 
+<!-- Titre et bouton pour l'ajout d'une recette dans la dase de donnée -->
 <div class="centre">
     <div class="gridTitre">
         <div>
@@ -82,6 +83,7 @@
     </div>
 </div>
 
+<!-- Section ou nous avaons la visualisation des 9 dernières recettes / résultats de la recherche avancée -->
 <div class="centre">
     <div class="gridListeRecette">
         <div class="boxRecette boxShadow" *ngFor="let r of recettes, let i = index">

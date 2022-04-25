@@ -21,6 +21,26 @@
     box-shadow: 0px 10px 10px grey;
 }
 
+/* Ppt pour mettre un rayon de 50px */
+.borderRad50{
+    border-radius: 50px;
+}
+
+/* Ppt pour le border gris des zones de recherche (ingrédient et recette)*/
+.borderSearch{
+    border: 3px solid grey;
+}
+
+/* Ppt pour border bottom de 5px en blanc*/
+.borderBWhite{
+    border-bottom: 5px white solid;
+}
+
+/* Ppt pour border top de 5px en blanc*/
+.borderTWhite{
+    border-top: 5px white solid;
+}
+
 /* Ppt pour les boutons "classique" du site : font en noir texte en blanc, et lorsque :hover font en blanc cassé et texte en noir*/
 .btnClassique{
     height: 100%;
@@ -32,7 +52,8 @@
 
 
 .btnClassique:hover{
-    background-color: rgb(220, 220, 220);
+    background-color: white;
+    border: 3px solid grey;
     color: black;
 }
 

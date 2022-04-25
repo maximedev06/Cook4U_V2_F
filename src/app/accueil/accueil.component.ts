@@ -11,7 +11,7 @@ import { RecetteService } from '../service/recette.service';
 export class AccueilComponent implements OnInit {
 
   recettes : Recette[] = [];
-  recettesSearch : Recette[] = [];
+
 
   constructor(private authR : RecetteService, private route : Router) { }
 
@@ -32,6 +32,7 @@ export class AccueilComponent implements OnInit {
     this.route.navigateByUrl("recette");
   }
 
+  /* Gestion de la recherche avancée des recettes */
   rechercheRecette(recette:Recette){
     this.authR.searchRecettes(recette)
       .subscribe(recettes => (this.recettes = recettes));

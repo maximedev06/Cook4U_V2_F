@@ -2,7 +2,9 @@
 /* *********************************** */
 /* Propriété de la partie info Recette */
 /* *********************************** */
-
+.decallerRecetteInfo{
+    margin-top: 50px;
+}
 
 .gridRecetteInformation{
     display: grid;
@@ -11,11 +13,9 @@
     margin: auto;
     text-align: center;
     grid-row-gap: 0px;
-
-    border-radius: 50px;
     overflow: hidden;
-    box-shadow: 0px 10px 10px grey;
 }
+
 
 /*Partie 1 : avec le nom de la recette et le bouton pour modifier la recette*/
     .gridRecetteInformation1{
@@ -39,8 +39,6 @@
 /*Partie 2 : avec l'image de la recette*/
     .imgRecette{
         height: 460px;
-        border-top: 5px white solid;
-        border-bottom: 5px white solid;
     }
 
 
@@ -65,9 +63,126 @@
 
     
 
+/* *************************************** */
+/* Propriété de la partie quantité Recette */
+/* *************************************** */
+
+
+.gridQuantiteInformation{
+    display: grid;
+    grid-template-columns: repeat(1, 700px);
+    grid-template-rows: repeat(2);
+    margin: auto;
+    margin-top: 40px;
+    grid-row-gap: 0px;
+    overflow: hidden;
+}
+
+/* Partie sup avec "Ingredient et le nombre de part de la recette*/
+    .gridQuantiteSup{
+        display: grid;
+        grid-template-columns: 350px 270px 80px;
+    }
+
+    .gridQuantiteSup div{
+        height: 60px;
+    }
+
+    .titreIngredient{
+        font-weight: 700;
+    }
+
+    .decallage{
+        margin-right: 90px;
+    }
+
+    
+    
+
+
+/*Partie inférieuir : avec la liste des ingrédients + quantité nécessaire à la réalistion de la recette*/
+
+    .gridQuantiteInf{
+        display: grid;
+        grid-template-columns: 350px 350px;
+        grid-template-rows: auto;
+        margin: auto;
+        grid-column-gap: 0px ;
+        grid-row-gap: 0px;
+        margin-bottom: 20px;
+    }
+
+    .gridQuantiteInf div{
+        height: 60px;
+    }
+
+
+    .nomIngredient{
+        font-weight: 700;
+        text-align: left;
+        margin-left: 40px;
+        line-height: 300%;
+        font-size: 110%;
+
+    }
+
+    .btnInfoIngredient{
+        border: none;
+    }
+
+    .btnInfoIngredient:hover{
+        color: red;
+    }
+
+
+/* ************************************ */
+/* Propriété de la partie étape Recette */
+/* ************************************ */
+
+.gridEtapeInformation{
+    display: grid;
+    grid-template-columns: repeat(1, 700px);
+    grid-template-rows: repeat(auto);
+    margin: auto;
+    margin-top: 40px;
+    grid-row-gap: 0px;
+    overflow: hidden;
+}
+
+.gridEtapeInf{
+    display: grid;
+    grid-template-columns:100px 500px 100px;
+    margin-bottom: 0px;
+}
+
+.gridEtapeInf:last-child{
+    margin-bottom: 30px;
+}
+
+.gridEtapeInf div {
+    margin-top: 30px;
+    margin-bottom: 0px;
+    
+}
+
+.decallage2{
+    margin-right: 160px;
+}
 
 
 
+
+
+
+
+.numEtape{
+    text-align: center;
+}
+
+.numEtape h5{
+    margin-top: 0px;
+    font-weight: 700;
+}
 
 
 

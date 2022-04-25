@@ -1,53 +1,94 @@
 
-
-<div class="centre">
-    <div class="gridRecetteInformation bgcolorGrey">
-        <div class="gridRecetteInformation1">
-            <div class=""></div>
-            <div class="centrerVerticalement "><h1 class="majPremiereLettre">{{recette?.nomRecette}}</h1></div>
-            <div class="centrerVerticalement">
-                <button class="btnModifRecette bgcolorGrey">
-                    <img height="100%" src="../../assets/img/param.png" alt="{{recette?.nomRecette}}">
-                </button>
+<!-- Zone de présentation des caractéristique principales de la recette  -->
+<div class="decallerRecetteInfo">
+    <div class="centre">
+        <div class="gridRecetteInformation bgcolorGrey boxShadow borderRad50">
+            <div class="gridRecetteInformation1">
+                <div class=""></div>
+                <div class="centrerVerticalement "><h1 class="majPremiereLettre">{{recette?.nomRecette}}</h1></div>
+                <div class="centrerVerticalement">
+                    <button class="btnModifRecette bgcolorGrey">
+                        <img height="100%" src="../../assets/img/param.png" alt="{{recette?.nomRecette}}">
+                    </button>
+                </div>
             </div>
-        </div>
-        <div class="imgRecette">
-            <img src="{{recette?.photoRecette}}" alt="" width="100%" height="100%">
-        </div>
-        <div class="gridRecetteInformation3">
-            <div class="centrerVerticalement">
-                <img src="../../assets/img/horloge.png" alt="temps" height="60%">
-                <h3>  &nbsp; {{recette?.temps}} min</h3>
+            <div class="imgRecette borderBWhite borderTWhite">
+                <img src="{{recette?.photoRecette}}" alt="" width="100%" height="100%">
             </div>
-            <div class="centrerVerticalement">
-                <img src="../../assets/img/difficulte.png" alt="temps" height="60%">
-                <h3>  &nbsp; {{recette?.difficulte}}</h3>
+            <div class="gridRecetteInformation3">
+                <div class="centrerVerticalement centre">
+                    <img src="../../assets/img/horloge.png" alt="temps" height="60%">
+                    <h3>  &nbsp; {{recette?.temps}} min</h3>
+                </div>
+                <div class="centrerVerticalement">
+                    <img src="../../assets/img/difficulte.png" alt="temps" height="60%">
+                    <h3>  &nbsp; {{recette?.difficulte}}</h3>
+                </div>
+                <div class="centrerVerticalement">
+                    <img src="../../assets/img/kcal.PNG" alt="temps" height="70%">
+                    <h3>  &nbsp; {{recette?.calorie}} /pers</h3>
+                </div>
             </div>
-            <div class="centrerVerticalement">
-                <img src="../../assets/img/kcal.PNG" alt="temps" height="60%">
-                <h3>  &nbsp; {{recette?.calorie}} /pers</h3>
+            <div class="textePresentationRecette majPremiereLettre">
+                <h5>{{recette?.texteRecette}}</h5>
             </div>
-        </div>
-        <div class="textePresentationRecette majPremiereLettre">
-            {{recette?.texteRecette}}
         </div>
     </div>
 </div>
 
+<!-- Zone ou nous avons la liste des différents ingrédient (avec leurs quantités) pour réaliser la recette -->
+<div class="centre">
+    <div class="gridQuantiteInformation bgcolorGrey boxShadow borderRad50">
+        <div class="gridQuantiteSup borderBWhite">
+            <div class="ingredient centrerVerticalement decallage" >
+                <h3 class="titreIngredient">Ingrédients </h3>
+            </div>
+            <div class="nbrePart centrerVerticalement">
+                <h4  class="titreIngredient" >2 Personnes</h4>
+            </div>
+            <div class="centrerVerticalement">
+                <!-- Zone pour le bouton ajout ingrédient de la page modification ingrédient -->
+            </div>
+        </div>
 
+        <div class="gridQuantiteInf" >
+            <div class="" *ngFor="let q of quantite">
+                <div class="centrerV">
+                    <button type="button" (click)="infoIngredient(q)" class="btnInfoIngredient bgcolorGrey">
+                        <h6 class="majPremiereLettre nomIngredient">{{q.ingredient.nomIngredient}} : {{q.quantite}}&nbsp;{{q.unite}}</h6>
+                    </button>
+                </div>
+            </div>
+        </div>
 
-<br><br><br><br>
+    </div>
+</div>
 
+<!-- Zone ou nous avons la liste de toutes les étapes pour réaliser la recette de cuisine -->
+<div class="centre">
+    <div class="gridEtapeInformation  bgcolorGrey boxShadow borderRad50">
+        <div class="gridQuantiteSup borderBWhite">
+            <div class="ingredient centrerVerticalement decallage2" >
+                <h3 class="titreIngredient">Étapes </h3>
+            </div>
+        </div>
+        <div class="test" >
+            <div class="gridEtapeInf" *ngFor="let e of etape">
+                <div class="numEtape" >
+                    <h5>{{e.numEtape}}.</h5>
+                </div>
+                <div class="texteEtape">
+                    <h5 >
+                        {{e.texteEtape}}
+                    </h5>
+                </div>
+                <div class="btnModif">
+                    <!--Zone pour le bouton de modification dans la page de modification de la recette-->
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-
-<h1>Information sur la recette {{recette?.nomRecette}}</h1>
-
-<ul> 
-    <li>{{recette?.nomRecette}}</li>
-    <li>{{recette?.photoRecette}}</li>
-    <li>{{recette?.temps}}</li>
-    <li>{{recette?.difficulte}}</li>
-    <li>{{recette?.calorie}}</li>
-    <li>{{recette?.texteRecette}}</li>
-</ul>
-
+<br><br><br>

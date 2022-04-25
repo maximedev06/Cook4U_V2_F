@@ -11,6 +11,8 @@ import { HttpErrorHandler } from './http-error-handler.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AccueilComponent } from './accueil/accueil.component';
 import { RecetteInformationComponent } from './recette-information/recette-information.component';
+import { IngredientInformationComponent } from './ingredient-information/ingredient-information.component';
+import { IngredientListeComponent } from './ingredient-liste/ingredient-liste.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { RecetteInformationComponent } from './recette-information/recette-infor
     Test1Component,
     AccueilComponent,
     RecetteInformationComponent,
+    IngredientInformationComponent,
+    IngredientListeComponent,
   ],
   imports: [
     BrowserModule,

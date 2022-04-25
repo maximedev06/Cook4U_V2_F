@@ -1,0 +1,139 @@
+
+/* ************************************** */
+/* Propriété de la partie info Ingredient */
+/* ************************************** */
+
+.gridIngredient{
+    display: grid;
+    grid-template-columns: repeat(1, 700px);
+    grid-template-rows: repeat(auto);
+    margin: auto;
+    margin-top: 50px;
+    grid-row-gap: 20px;
+    overflow: hidden;
+}
+
+.gridIngredientNom{
+    display: grid;
+    grid-template-columns: 100px 500px 100px;
+    grid-template-rows: repeat(1,80px);
+}
+
+.btnModifIngredient{
+    margin-top: 17px;
+    height: 50%;
+    border: none;
+}
+
+.nomIngredient{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.infoIngredient{
+    margin-left: 50px;
+}
+
+.infoIngredient2{
+    margin-left: 100px;
+}
+
+
+/* *************************************** */
+/* Propriété de la partie modif Ingredient */
+/* *************************************** */
+
+.position{
+    margin-top: -40px;
+}
+.gridModifRecette{
+    display: grid;
+    grid-template-columns: repeat(1, 700px);
+    grid-template-rows: repeat(auto);
+    margin: auto;
+    grid-row-gap: 0px;
+    overflow: hidden;
+}
+
+
+.nomIngredientModif{
+    margin-top: 20px;
+    text-align: center;
+    height: 60px;
+}
+
+    /* Partie 2 : avec les informations de la recette que nous pouvons modifier*/
+    
+    .gridModifRecetteCentre{
+    display: grid;
+    grid-template-columns: repeat(2, 350px);
+    margin: auto;
+    margin-top: 0%;
+    text-align: center;
+    grid-row-gap: 10px;
+    }
+
+    label, input, option{
+        font-size: 120%;
+    }
+   
+    .gridInfoModif2{
+        text-align: left;
+        margin-left: 30px;
+        display: grid;
+        grid-template-columns: 160px 250px;
+        grid-row-gap: 10px;
+
+    }
+
+    .gridInfoModif{
+        text-align: left;
+        margin-left: 30px;
+        display: grid;
+        grid-template-columns: 160px 100px;
+        grid-row-gap: 10px;
+
+    }
+
+
+    .nomIngreModif{
+        grid-column: span 2;
+        margin-top: 10px;
+    }
+
+    .txtLeft{
+        text-align: left;
+        margin-left: 20px;
+    }
+
+    
+
+    .gridBoutonModif{
+        text-align: left;
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(2,350px);
+        height: 70px;
+    }
+
+    .btnModif{
+        height: 100%;
+        width: 100%;
+        border: none;
+        font-weight: bolder;
+        color: white;
+    }
+    
+    
+    .btnModif:hover{
+        background-color: white;
+        color: black;
+    }
+
+    .btnModifAnnuler{
+        border-left: 5px white solid;
+    }
+
+
+

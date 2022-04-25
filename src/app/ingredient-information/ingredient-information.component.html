@@ -1,0 +1,121 @@
+
+
+<div class="centre" id="informationIngredient">
+    <div class="gridIngredient bgcolorGrey boxShadow borderRad50 ">
+        <div class="gridIngredientNom borderBWhite">
+            <div></div>
+            <h1 class="centrerVerticalement">{{ingredient?.nomIngredient}}</h1>
+            <button class="btnModifIngredient bgcolorGrey" (click)="modifierIngredientBouton()">
+                <img height="100%" src="../../assets/img/param.png" alt="{{ingredient?.nomIngredient}}">
+            </button>
+        </div>
+        <div class="infoIngredient">
+            <h5>NutriScore : {{ingredient?.nutriscore}}</h5>
+        </div>
+        <div class="infoIngredient">
+            <h5>NovaScore : {{ingredient?.novaScore}}</h5>
+        </div>
+        <div class="infoIngredient">
+            <h5>
+                Information nutritionnelles pour 100g :
+            </h5>
+        </div>
+        <div class="infoIngredient2">
+            <h5>Apport énergétique : {{ingredient?.energie}} kcal</h5>
+        </div>
+        <div class="infoIngredient2">
+            <h5>Matière grasse : {{ingredient?.matiereGrasse}} g</h5>
+        </div>
+        <div class="infoIngredient2">
+            <h5>Acide gras saturé : {{ingredient?.acideGrasSature}} g</h5>
+        </div>
+        <div class="infoIngredient2">
+            <h5>Glucide : {{ingredient?.glucide}} g</h5>
+        </div>
+        <div class="infoIngredient2">
+            <h5>Sucre : {{ingredient?.sucre}} g</h5>
+        </div>
+        <div class="infoIngredient2">
+            <h5>Sel : {{ingredient?.sel}} g</h5>
+        </div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+
+<br><br><br><br>
+
+<div class="position" id="modificationIngredient" hidden>
+    <form action="" #connectFormulair="ngForm" (ngSubmit)="modifierIngredient(connectFormulair.value)">
+        <div class="centre">
+            <div class="gridModifRecette borderRad50 bgcolorGrey boxShadow">
+                <div class="nomIngredientModif borderBWhite">
+                    <h1>Parmesan</h1>
+                </div>
+                <div class="gridModifRecetteCentre">
+                    <div class="nomIngreModif txtLeft gridInfoModif2" >
+                        <label for="" class="">Nom : &nbsp;</label>
+                        <input width="" type="text" class="input" name="nomIngredient" ngModel="{{ingredient?.nomIngredient}}">
+                    </div>
+                    <div class="txtLeft gridInfoModif">
+                        <label for="" class="">NutriScore : &nbsp; </label>
+                        <select class="select" name="nutriscore" ngModel="{{ingredient?.nutriscore}}" id="NutriScore">
+                            <option value="NaN"> NaN </option>
+                            <option value="A"> A </option>
+                            <option value="B"> B</option>
+                            <option value="C"> C</option>
+                            <option value="D"> D</option>
+                            <option value="E"> E</option>
+                        </select>
+                    </div>
+                    <div class="txtLeft gridInfoModif">
+                        <label for="" class="">NovaScore : &nbsp; </label>
+                        <select class="select" name="novaScore" ngModel={{ingredient?.novaScore}} id="Nova">
+                            <option value="NaN">NaN</option>
+                            <option value="1"> 1 </option>
+                            <option value="2"> 2</option>
+                            <option value="3"> 3</option>
+                            <option value="4"> 4 </option>
+                        </select>
+                    </div>
+                    <div class="txtLeft gridInfoModif">
+                        <label for="" class="">kcal/100g : </label>
+                        <input width="" type="number" class="input" name="energie" ngModel="{{ ingredient?.energie}}">
+                    </div>
+                    <div class="txtLeft gridInfoModif">
+                        <label for="" class="">Matiere Grasse : </label>
+                        <input type="number" class="input" name="matiereGrasse" ngModel="{{ ingredient?.matiereGrasse}}">
+                    </div>
+                    <div class="txtLeft gridInfoModif">
+                        <label for="" class="">Acide gras saturé : </label>
+                        <input type="number" class="input" name="acideGrasSature" ngModel="{{ ingredient?.acideGrasSature}}">
+                    </div>
+                    <div class="txtLeft gridInfoModif">
+                        <label for="" class="">Glucide :</label>
+                        <input type="number" class="input" name="glucide" ngModel="{{ ingredient?.glucide}}">
+                    </div>
+                    <div class="txtLeft gridInfoModif">
+                        <label for="" class="">Sucre : </label>
+                        <input type="number" class="input" name="sucre" ngModel="{{ ingredient?.sucre}}">
+                    </div>
+                    <div class="txtLeft gridInfoModif">
+                        <label for="" class="">Sel : </label>
+                        <input type="number" class="input" name="sel" ngModel="{{ ingredient?.sel}}">
+                    </div>
+                </div>
+                <div class="gridBoutonModif borderTWhite">
+                    <button type="submit" class="btnModif bgcolorBlack btnModifValider">Valider</button>
+                    <button type="button" (click)="annuler()" class="btnModif bgcolorBlack btnModifAnnuler">Annuler</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+
+
+
+
+
+
