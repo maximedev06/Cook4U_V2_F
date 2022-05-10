@@ -1,10 +1,34 @@
-# Cook4uF
+# Cook4U
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.2.
+Partie Front
+
+1.	Installez le Framework Angular : https://angular.io/cli 
+
+2.	Installez l’IDE Visual Studio Code sur votre ordinateur : https://code.visualstudio.com/ 
+
+3.	Connectez votre compte GitHub sur Visual Studio Code
+
+4.	Sur GITHUB, copier le lien HTTPS du repository « Cook4U_F » 
+
+5.	Sur la page d’accueil de l’IDE sélectionnez « Cloner un dépôt Git… » et coller le lien HTTPS du projet
+
+ 
+Figure 4 : 	 Cloner un dépôt Git sur VSC 
+
+6.	Terminal  nouveau terminal : exécuter les commandes
+-	 npm install 
+-	ng serve
+-	
+7.	Finalement aller dans un navigateur à la page : http://localhost:4200/ 
+
+
+
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
